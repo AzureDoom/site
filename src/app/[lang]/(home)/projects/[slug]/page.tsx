@@ -8,7 +8,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { ChevronLeft, Github, Globe, Twitter } from "lucide-react";
-import { getMDXComponents } from "@/mdx-components";
+import { getMDXComponents } from "@/lib/mdx-components";
 
 type ProjectFrontmatter = {
   title: string;

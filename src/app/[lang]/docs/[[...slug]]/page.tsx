@@ -7,7 +7,7 @@ import {
   PageLastUpdate,
 } from "fumadocs-ui/page";
 import { notFound } from "next/navigation";
-import { getMDXComponents } from "@/mdx-components";
+import { getMDXComponents } from "@/lib/mdx-components";
 import type { Metadata } from "next";
 import { createRelativeLink } from "fumadocs-ui/mdx";
 import { branch } from "@/git-info.json";
@@ -37,7 +37,7 @@ export default async function Page(
         src="/assets/official-documentation/background/content-lower.webp"
         alt="Background"
         fill
-        className="fixed inset-0 -z-10 hidden w-screen h-screen mask mask-b-from-50% mask-b-to-transparent mask-b-to-85% object-cover opacity-50 not-md:hidden! not-dark:hidden! in-[.official]:block pointer-events-none"
+        className="mask pointer-events-none fixed inset-0 -z-10 hidden h-screen w-screen mask-b-from-50% mask-b-to-transparent mask-b-to-85% object-cover opacity-50 not-md:hidden! not-dark:hidden! in-[.official]:block"
       />
       <ViewTransition share="blur-scale-transition" name="docs-page">
         <DocsPage
