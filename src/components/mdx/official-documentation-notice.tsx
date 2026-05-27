@@ -1,5 +1,5 @@
 import { getMessages } from "@/lib/locale";
-import { Callout } from "./Callout";
+import { Callout } from "./callout";
 
 export function OfficialDocumentationNotice() {
   const messages = getMessages();

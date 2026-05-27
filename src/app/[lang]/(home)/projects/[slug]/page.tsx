@@ -8,8 +8,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { ChevronLeft, Github, Globe, Twitter } from "lucide-react";
-import { Card, Cards } from "fumadocs-ui/components/card";
-import { Callout } from "@/components/mdx/Callout";
+import { getMDXComponents } from "@/mdx-components";
 
 type ProjectFrontmatter = {
   title: string;
@@ -28,12 +27,6 @@ type ProjectFrontmatter = {
     twitter?: string;
     website?: string;
   };
-};
-
-const components = {
-  Card,
-  Cards,
-  Callout: Callout,
 };
 
 const DiscordIcon = (
@@ -177,7 +170,7 @@ export default async function ProjectPage({
         </div>
 
         <article className="prose prose-neutral dark:prose-invert max-w-none">
-          <MDXRemote source={project.content} components={components} />
+          <MDXRemote source={project.content} components={getMDXComponents()} />
         </article>
 
         {author && (
