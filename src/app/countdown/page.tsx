@@ -23,10 +23,6 @@ export default function Countdown() {
 
   return (
     <>
-      <div className="absolute bottom-4 left-4">
-        <ModeToggle />
-      </div>
-
       <Image
         src={BG}
         alt="Background"

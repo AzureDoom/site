@@ -56,25 +56,17 @@ export default async function RootLayout({
 }) {
   return (
     <html suppressHydrationWarning>
-      <body className="transition-colors">
-        {" "}
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="system"
-          enableSystem
-          disableTransitionOnChange
+      <body className="transition-colors dark">
+        <div
+          className={cn(
+            geist.variable,
+            geistMono.variable,
+            lexend.variable,
+            nunitoSans.variable,
+          )}
         >
-          <div
-            className={cn(
-              geist.variable,
-              geistMono.variable,
-              lexend.variable,
-              nunitoSans.variable,
-            )}
-          >
-            {children}
-          </div>
-        </ThemeProvider>
+          {children}
+        </div>
       </body>
     </html>
   );
